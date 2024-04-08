@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskProject.Api", "TaspProject\TaskProject.Api.csproj", "{6346B31E-A065-46CD-A584-E9E92495B644}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskProject.Api", "TaspProject\TaskProject.Api.csproj", "{6346B31E-A065-46CD-A584-E9E92495B644}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskProject.Domain", "TaskProject.Domain\TaskProject.Domain.csproj", "{61FB089E-2BEC-44B3-B27C-7F02EF9166A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskProject.Domain", "TaskProject.Domain\TaskProject.Domain.csproj", "{61FB089E-2BEC-44B3-B27C-7F02EF9166A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskProject.DataAccess", "TaskProject.DataAccess\TaskProject.DataAccess.csproj", "{D0FD75AA-07CB-4644-AABE-ACCDB7008EDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskProject.DataAccess", "TaskProject.DataAccess\TaskProject.DataAccess.csproj", "{D0FD75AA-07CB-4644-AABE-ACCDB7008EDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskProject.Service", "TaskProject.Service\TaskProject.Service.csproj", "{C0D64D0D-3D7C-4FAA-841A-EFC38EA384DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskProject.Service", "TaskProject.Service\TaskProject.Service.csproj", "{C0D64D0D-3D7C-4FAA-841A-EFC38EA384DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TelegramBot", "TelegramBot\TelegramBot.csproj", "{26DD310F-42EC-4C87-B8D2-F7BB8E60E612}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C0D64D0D-3D7C-4FAA-841A-EFC38EA384DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0D64D0D-3D7C-4FAA-841A-EFC38EA384DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0D64D0D-3D7C-4FAA-841A-EFC38EA384DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26DD310F-42EC-4C87-B8D2-F7BB8E60E612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26DD310F-42EC-4C87-B8D2-F7BB8E60E612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26DD310F-42EC-4C87-B8D2-F7BB8E60E612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26DD310F-42EC-4C87-B8D2-F7BB8E60E612}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
