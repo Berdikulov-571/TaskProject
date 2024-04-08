@@ -15,6 +15,21 @@ namespace TaspProject
             builder.Services.AddService();
             builder.Services.AddDataAccess(builder.Configuration);
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("http://localhost:4200",
+                                                          "http://localhost:4201")
+                                      .AllowAnyHeader()
+                                      .AllowAnyMethod()
+                                      .AllowAnyOrigin();
+
+                                  });
+            });
+
 
             var app = builder.Build();
 
@@ -26,8 +41,13 @@ namespace TaspProject
 
             app.UseHttpsRedirection();
 
+            app.UseStaticFiles();
+
+            app.UseHttpsRedirection();
+
             app.UseAuthorization();
 
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.MapControllers();
 
