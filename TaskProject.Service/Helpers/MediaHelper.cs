@@ -10,7 +10,7 @@ namespace TaskProject.Service.Helpers
 
             string[] ImageExtension = GetFileExtensions();
 
-            if (ImageExtension.Any(x => x == fileInfo.Extension))
+            if (ImageExtension.Any(x => x.ToLower() == fileInfo.Extension.ToLower()))
             {
                 string extension = fileInfo.Extension;
                 string name = "FILE_" + Guid.NewGuid() + extension;
@@ -24,6 +24,12 @@ namespace TaskProject.Service.Helpers
             return new string[]
             {
             ".mp4",
+            ".mkv",
+            ".mov",
+            ".m4v",
+            ".webm",
+            ".avi",
+            ".m4a",
             };
         }
     }
