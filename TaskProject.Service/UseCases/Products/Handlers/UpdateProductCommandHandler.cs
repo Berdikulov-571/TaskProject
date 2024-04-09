@@ -20,8 +20,9 @@ namespace TaskProject.Service.UseCases.Products.Handlers
         public async Task<int> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
             var product = await _context.Products.FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
+            var checkSortNumbere = await _context.Products.FirstOrDefaultAsync(x => x.SortNumber == request.SortNumber, cancellationToken);
 
-            if (product == null)
+            if (product == null || (product.SortNumber != checkSortNumbere.SortNumber && checkSortNumbere != null))
                 return 0;
 
             if (request.Name != null)
