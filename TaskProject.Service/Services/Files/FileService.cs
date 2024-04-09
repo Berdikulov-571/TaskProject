@@ -8,7 +8,6 @@ namespace TaskProject.Service.Services.Files
     public class FileService : IFileService
     {
         private readonly string MEDIA = "media";
-        private readonly string IMAGES = "images";
         private readonly string VIDEOS = "videos";
         private readonly string ROOTPATH;
 
